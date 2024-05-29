@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hide Element on Button Click</title>
+    <style>
+      body {
+        text-align: center;
+        font-size: larger;
+      }
+      /* Optional styling for demonstration purposes */
+      .hide-button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: larger;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>HIDE THE TEXT</h2>
+    <p id="paragraph">
+      This is a paragraph. Click the button below to hide this paragraph<br />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, beatae
+      voluptate corporis alias dignissimos labore similique. Praesentium sint
+      quasi ab sapiente quos veritatis, reprehenderit illum. Ab dolor
+      necessitatibus labore corrupti.
+    </p>
+    <button class="hide-button" onclick="hideElement()">Hide Paragraph</button>
+
+    <script>
+      function hideElement() {
+        var paragraph = document.getElementById("paragraph");
+        if (paragraph.style.display === "none") {
+          paragraph.style.display = "block";
+        } else {
+          paragraph.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
